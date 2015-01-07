@@ -4,7 +4,7 @@ open IntelliFactory.WebSharper.InterfaceGenerator
 
 module Definition =
     open IntelliFactory.WebSharper.ThreeJs
-    open IntelliFactory.WebSharper.Dom
+    open IntelliFactory.WebSharper.JavaScript.Dom
 
     let O = T<unit>
 
