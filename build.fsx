@@ -2,26 +2,18 @@
 open IntelliFactory.Build
 
 let bt =
-    (
-        BuildTool().PackageId("WebSharper.ThreeJs.TransformControls", "3.0-alpha")
-        |> fun bt ->
-            bt.WithFramework bt.Framework.Net40
-    )
+    BuildTool().PackageId("WebSharper.ThreeJs.TransformControls", "3.0-alpha")
+    |> fun bt -> bt.WithFramework bt.Framework.Net40
+
+let main =
+    bt.WebSharper.Extension("WebSharper.ThreeJs.TransformControls")
+        .SourcesFromProject()
+        .Embed(["TransformControls.js"])
         .References (fun r ->
             [
                 r.NuGet("WebSharper.ThreeJs").Reference()
             ]
         )
-
-let main =
-    (
-        bt.WebSharper.Extension "IntelliFactory.WebSharper.ThreeJs.TransformControls"
-        |> FSharpConfig.BaseDir.Custom "TransformControls"
-    )
-        .SourcesFromProject("TransformControls.fsproj")
-        .Embed [
-            "TransformControls.js"
-        ]
 
 bt.Solution [
     main

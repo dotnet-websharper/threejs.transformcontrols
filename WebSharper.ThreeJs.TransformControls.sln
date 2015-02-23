@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TransformControls", "TransformControls\TransformControls.fsproj", "{E998E5D9-4BFF-4DF0-9E67-3DC02F6B1D91}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.ThreeJs.TransformControls", "WebSharper.ThreeJs.TransformControls\WebSharper.ThreeJs.TransformControls.fsproj", "{E998E5D9-4BFF-4DF0-9E67-3DC02F6B1D91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

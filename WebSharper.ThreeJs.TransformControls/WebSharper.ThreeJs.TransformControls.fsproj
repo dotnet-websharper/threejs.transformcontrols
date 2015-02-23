@@ -6,9 +6,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{e998e5d9-4bff-4df0-9e67-3dc02f6b1d91}</ProjectGuid>
     <WebSharperProject>InterfaceGenerator</WebSharperProject>
-    <Name>TransformControls</Name>
-    <RootNamespace>TransformControls</RootNamespace>
-    <AssemblyName>TransformControls</AssemblyName>
+    <Name>WebSharper.ThreeJs.TransformControls</Name>
+    <RootNamespace>$(Name)</RootNamespace>
+    <AssemblyName>$(Name)</AssemblyName>
     <NuGetPackageImportStamp>f03dddbd</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -45,26 +45,9 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <Import Project="..\packages\WebSharper.2.5.114.49\build\WebSharper.targets" Condition="Exists('..\packages\WebSharper.2.5.114.49\build\WebSharper.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\WebSharper.2.5.114.49\build\WebSharper.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WebSharper.2.5.114.49\build\WebSharper.targets'))" />
-  </Target>
+  <Import Project="../build/net40/$(Name).proj" />
   <ItemGroup>
     <Compile Include="Main.fs" />
-    <None Include="packages.config" />
     <EmbeddedResource Include="TransformControls.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="IntelliFactory.WebSharper.ThreeJs">
-      <HintPath>..\packages\WebSharper.ThreeJs.2.5.6.11\lib\net40\IntelliFactory.WebSharper.ThreeJs.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
   </ItemGroup>
 </Project>

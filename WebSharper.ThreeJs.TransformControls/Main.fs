@@ -1,26 +1,26 @@
 namespace TransformControls
 
-open IntelliFactory.WebSharper.InterfaceGenerator
+open WebSharper.InterfaceGenerator
 
 module Definition =
-    open IntelliFactory.WebSharper.ThreeJs
-    open IntelliFactory.WebSharper.JavaScript.Dom
+    open WebSharper.ThreeJs
+    open WebSharper.JavaScript.Dom
 
     let O = T<unit>
 
     let mainResource =
         Resource "TransformControls" "TransformControls.js"
         |> RequiresExternal [
-            T<IntelliFactory.WebSharper.ThreeJs.Resources.Js>
+            T<WebSharper.ThreeJs.Resources.Js>
         ]
 
     let TransformGizmo =
         Class "THREE.TransformGizmo"
         |=> Inherits T<THREE.Object3D>
-        |+> [
+        |+> Static [
             Constructor O
         ]
-        |+> Protocol [
+        |+> Instance [
             "handles"     =@ T<THREE.Object3D>
             "pickers"     =@ T<THREE.Object3D>
             "planes"      =@ T<THREE.Object3D>
@@ -36,10 +36,10 @@ module Definition =
     let TransformGizmoTranslate =
         Class "THREE.TransformGizmoTranslate"
         |=> Inherits TransformGizmo
-        |+> [
+        |+> Static [
             Constructor O
         ]
-        |+> Protocol [
+        |+> Instance [
             "handleGizmos" =@ T<obj>
             "pickerGizmos" =@ T<obj>
 
@@ -49,10 +49,10 @@ module Definition =
     let TransformGizmoRotate =
         Class "THREE.TransformGizmoRotate"
         |=> Inherits TransformGizmo
-        |+> [
+        |+> Static [
             Constructor O
         ]
-        |+> Protocol [
+        |+> Instance [
             "handleGizmos" =@ T<obj>
             "pickerGizmos" =@ T<obj>
 
@@ -63,10 +63,10 @@ module Definition =
     let TransformGizmoScale =
         Class "THREE.TransformGizmoScale"
         |=> Inherits TransformGizmo
-        |+> [
+        |+> Static [
             Constructor O
         ]
-        |+> Protocol [
+        |+> Instance [
             "handleGizmos" =@ T<obj>
             "pickerGizmos" =@ T<obj>
 
@@ -76,7 +76,7 @@ module Definition =
     let TransformControls =
         let Gizmo =
             Class "Gizmo"
-            |+> Protocol [
+            |+> Instance [
                 "translate" =@ TransformGizmoTranslate
                 "rotate"    =@ TransformGizmoRotate
                 "scale"     =@ TransformGizmoScale
@@ -84,10 +84,10 @@ module Definition =
         
         Class "THREE.TransformControls"
         |=> Inherits T<THREE.Object3D>
-        |+> [
+        |+> Static [
             Constructor (T<THREE.Object3D>?camera * !? T<Element>?domElement)
         ]
-        |+> Protocol [
+        |+> Instance [
             "gizmo"  =@ Gizmo
             "object" =@ T<THREE.Object3D>
             "snap"   =@ T<obj>
@@ -112,14 +112,14 @@ module Definition =
 
     let Assembly =
         Assembly [
-            Namespace "IntelliFactory.WebSharper.ThreeJs.THREE" [
+            Namespace "WebSharper.ThreeJs.THREE" [
                 TransformGizmo
                 TransformGizmoTranslate
                 TransformGizmoRotate
                 TransformGizmoScale
                 TransformControls
             ]
-            Namespace "IntelliFactory.WebSharper.ThreeJs.Resources" [
+            Namespace "WebSharper.ThreeJs.Resources" [
                 mainResource
             ]
         ]
