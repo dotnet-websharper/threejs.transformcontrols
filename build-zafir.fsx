@@ -13,7 +13,7 @@ let main =
         .Embed(["TransformControls.js"])
         .References (fun r ->
             [
-                r.NuGet("Zafir.ThreeJs").ForceFoundVersion().Reference()
+                r.NuGet("Zafir.ThreeJs").Latest(true).ForceFoundVersion().Reference()
             ]
         )
 
