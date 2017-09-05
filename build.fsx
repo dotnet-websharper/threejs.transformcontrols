@@ -3,7 +3,7 @@ open IntelliFactory.Build
 
 let bt =
     BuildTool().PackageId("WebSharper.ThreeJs.TransformControls")
-        .VersionFrom("WebSharper")
+        .VersionFrom("WebSharper", versionSpec = "(,4.0)")
         .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
@@ -13,7 +13,7 @@ let main =
         .Embed(["TransformControls.js"])
         .References (fun r ->
             [
-                r.NuGet("WebSharper.ThreeJs").ForceFoundVersion().Reference()
+                r.NuGet("WebSharper.ThreeJs").Version("(,4.0)").ForceFoundVersion().Reference()
             ]
         )
 

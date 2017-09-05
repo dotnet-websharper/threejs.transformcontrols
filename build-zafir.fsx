@@ -2,18 +2,18 @@
 open IntelliFactory.Build
 
 let bt =
-    BuildTool().PackageId("Zafir.ThreeJs.TransformControls")
-        .VersionFrom("Zafir")
+    BuildTool().PackageId("WebSharper.ThreeJs.TransformControls")
+        .VersionFrom("WebSharper")
         .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
 let main =
-    bt.Zafir.Extension("WebSharper.ThreeJs.TransformControls")
+    bt.WebSharper4.Extension("WebSharper.ThreeJs.TransformControls")
         .SourcesFromProject()
         .Embed(["TransformControls.js"])
         .References (fun r ->
             [
-                r.NuGet("Zafir.ThreeJs").Latest(true).ForceFoundVersion().Reference()
+                r.NuGet("WebSharper.ThreeJs").Latest(true).ForceFoundVersion().Reference()
             ]
         )
 
@@ -23,7 +23,7 @@ bt.Solution [
     bt.NuGet.CreatePackage()
         .Configure(fun c ->
             { c with
-                Title = Some "Zafir.ThreeJs.TransformControls"
+                Title = Some "WebSharper.ThreeJs.TransformControls"
                 LicenseUrl = Some "http://websharper.com/licensing"
                 ProjectUrl = Some "https://bitbucket.org/intellifactory/websharper.threejs.transformcontrols"
                 Description = "WebSharper Extensions for ThreeJs.TransformControls 20140419"
