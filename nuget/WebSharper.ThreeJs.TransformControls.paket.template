@@ -16,5 +16,5 @@ files
     ../WebSharper.ThreeJs.TransformControls/bin/Release/netstandard2.0/WebSharper.ThreeJs.TransformControls.dll ==> lib/netstandard2.0
     ../WebSharper.ThreeJs.TransformControls/bin/Release/netstandard2.0/WebSharper.ThreeJs.TransformControls.xml ==> lib/netstandard2.0
 dependencies
-        WebSharper ~> 4.2.3
-        WebSharper.ThreeJs ~> 4.2.1
+        WebSharper ~> 4.2.4
+        WebSharper.ThreeJs ~> 4.2.2
