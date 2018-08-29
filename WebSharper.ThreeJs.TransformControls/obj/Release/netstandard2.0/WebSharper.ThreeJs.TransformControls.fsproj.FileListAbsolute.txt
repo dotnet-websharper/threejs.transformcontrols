@@ -2,7 +2,7 @@ C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.Transfor
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\bin\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.dll
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\bin\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.pdb
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\bin\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.xml
-C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\obj\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.fsprojResolveAssemblyReference.cache
+C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\obj\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.fsprojAssemblyReference.cache
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\obj\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.dll
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\obj\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.xml
 C:\Jenkins\workspace\zafir.threejs.transformcontrols\WebSharper.ThreeJs.TransformControls\obj\Release\netstandard2.0\WebSharper.ThreeJs.TransformControls.pdb
